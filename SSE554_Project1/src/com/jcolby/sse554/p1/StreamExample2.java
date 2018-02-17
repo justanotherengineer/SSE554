@@ -19,7 +19,7 @@ public class StreamExample2 {
 		List<Person> people_sorted_by_age = processor.sortByAge();
 		List<Person> people_sorted_by_name = processor.sortByName();
 		Map<Integer, List<Person>> peopleByAge = people_sorted_by_age
-				.parallelStream()
+				.stream()
 				.collect(Collectors.groupingBy(p -> p.getAge()));
 		Long number_of_people = processor.countNames();
 		Long people_with_letter_j = processor.countNames("J");
@@ -64,9 +64,9 @@ public class StreamExample2 {
 		peopleByAge.forEach((age, p) -> System.out.format("Age %s: %s\n", age,p));
 		
 		System.out.println("\nProcessor Statistics--------------------------");
-		System.out.println("Total time for regular stream processor : " + (totalTime/1000000) +" miliseconds.");
-		System.out.println("Total time for parallel stream processor : " + (p_totalTime/1000000) +" miliseconds.");
-		System.out.println("The parallel processor was: " + ((totalTime - p_totalTime)/1000000) +" miliseconds faster.");
+		System.out.println("Total time for regular stream processor: " + (totalTime/1000000) +" milliseconds.");
+		System.out.println("Total time for parallel stream processor: " + (p_totalTime/1000000) +" milliseconds.");
+		System.out.println("The parallel processor was: " + ((totalTime - p_totalTime)/1000000) +" milliseconds faster.");
 
 	}
 }
