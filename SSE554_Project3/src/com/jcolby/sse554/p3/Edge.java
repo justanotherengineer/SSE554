@@ -1,10 +1,10 @@
 package com.jcolby.sse554.p3;
 
-public class Edge<T> {
-	private Node<T> node1_, node2_;
+public class Edge {
+	private Node node1_, node2_;
 	private int length_;
 	
-	public Edge(Node<T> n1, Node<T> n2, int len){
+	public Edge(Node n1, Node n2, int len){
 		
 		this.node1_ = n1;
 		this.node2_ = n2;

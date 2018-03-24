@@ -1,14 +1,14 @@
 package com.jcolby.sse554.p3;
 
-public class Node<T> {
+public class Node {
 
 	private String name_;
-	private T data_;
+	private String data_;
 	
-	public Node(String name, T object) {
+	public Node(String name, String data) {
 		
 		this.name_ = name;
-		this.data_ = object;
+		this.data_ = data;
 		
 	}
 	public Node(String name) {
@@ -18,7 +18,7 @@ public class Node<T> {
 		
 	}
 	
-	public T data() {
+	public String data() {
 		return data_;
 	}
 	
@@ -26,6 +26,9 @@ public class Node<T> {
 	public String toString() {
 		String s = name_;
 		return s;
+	}
+	public void set_data(String string) {
+		data_ = string;
 	}
 
 }
