@@ -24,6 +24,8 @@ public class MyLinkedList<E> {
 		if(current.value_ == item) {
 			current.next_node_ = next;	
 			return true;
+		}else if(next == null) {
+			return false;
 		}else {
 			while(true) {
 				if(next.value_ == item) {
